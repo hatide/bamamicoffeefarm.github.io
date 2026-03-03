@@ -1,0 +1,302 @@
+<div class="min-h-screen flex flex-col">
+  <!-- Navigation -->
+  <nav class="sticky top-0 z-50 bg-coffee-cream/80 backdrop-blur-md border-b border-coffee-dark/5">
+    <div class="max-w-7xl mx-auto px-6 h-20 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <span class="display text-2xl font-bold tracking-widest text-coffee-dark">BAMAMI</span>
+        <span class="text-xs uppercase tracking-[0.3em] text-coffee-medium mt-1">Coffee</span>
+      </div>
+      
+      <div class="flex items-center gap-8">
+        <div class="hidden md:flex items-center gap-6 text-sm uppercase tracking-wider font-medium">
+          <a href="#about" class="hover:text-coffee-medium transition-colors">{{ t('About', 'Giới thiệu') }}</a>
+          <a href="#process" class="hover:text-coffee-medium transition-colors">{{ t('Process', 'Quy trình') }}</a>
+          <a href="#video" class="hover:text-coffee-medium transition-colors">{{ t('Video', 'Video') }}</a>
+          <a href="#gallery" class="hover:text-coffee-medium transition-colors">{{ t('Gallery', 'Hình ảnh') }}</a>
+          <a href="#contact" class="hover:text-coffee-medium transition-colors">{{ t('Contact', 'Liên hệ') }}</a>
+        </div>
+        
+        <div class="flex items-center gap-2 border-l border-coffee-dark/10 pl-6">
+          <button (click)="setLang('vi')" 
+                  [class.text-coffee-medium]="langService.language() === 'vi'"
+                  class="text-xs font-bold cursor-pointer hover:text-coffee-medium transition-colors">VN</button>
+          <span class="text-coffee-dark/20">|</span>
+          <button (click)="setLang('en')" 
+                  [class.text-coffee-medium]="langService.language() === 'en'"
+                  class="text-xs font-bold cursor-pointer hover:text-coffee-medium transition-colors">EN</button>
+        </div>
+      </div>
+    </div>
+  </nav>
+
+  <!-- Hero Section -->
+  <section class="relative h-[85vh] overflow-hidden">
+    <img [src]="images[0]" 
+         class="w-full h-full object-cover scale-105 animate-pulse-slow" 
+         alt="Bamami Coffee Farm"
+         referrerpolicy="no-referrer">
+    <div class="absolute inset-0 bg-black/30 flex flex-col items-center justify-center text-center px-6">
+      <h1 class="display text-4xl md:text-6xl text-white mb-6 drop-shadow-2xl max-w-4xl">
+        {{ t('Specialty Robusta Farm in Gia Lai', 'Nông trại Robusta Đặc sản tại Gia Lai') }}
+      </h1>
+      <div class="flex flex-col items-center gap-4">
+        <span class="display text-2xl md:text-4xl text-coffee-light tracking-[0.2em]">BAMAMI COFFEE</span>
+        <p class="serif text-lg md:text-xl text-white/90 max-w-3xl leading-relaxed">
+          {{ t('A journey from ripe Robusta beans on the red basalt soil of Ianhin, Chu Pah, Gia Lai to a cup of coffee rich in identity.', 'Hành trình từ những hạt cà phê Robusta chín mọng trên vùng đất đỏ Bazan Ianhin, Chư Păh, Gia Lai đến tách cà phê đậm đà bản sắc.') }}
+        </p>
+      </div>
+      <a href="#about" class="mt-12 w-12 h-12 rounded-full border border-white/50 flex items-center justify-center text-white animate-bounce">
+        <mat-icon>expand_more</mat-icon>
+      </a>
+    </div>
+  </section>
+
+  <!-- About Section -->
+  <section id="about" class="py-24 px-6 bg-white">
+    <div class="max-w-4xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-coffee-medium uppercase tracking-[0.4em] text-xs font-bold block mb-4">
+          {{ t('About Bamami', 'Về Bamami') }}
+        </span>
+        <h2 class="display text-4xl md:text-5xl mb-8">
+          {{ t('Our Passion', 'Tâm huyết của chúng tôi') }}
+        </h2>
+        <div class="w-16 h-px bg-coffee-light mx-auto"></div>
+      </div>
+      
+      <div class="grid md:grid-cols-2 gap-12 items-center">
+        <div class="serif text-lg leading-relaxed text-coffee-dark/80 space-y-8">
+          <p>
+            {{ t('Bamami Coffee is not just a farm, it is our passion in elevating the value of Vietnamese Robusta coffee beans. Located at an ideal altitude with the mild climate of Gia Lai, we focus on sustainable farming and selective harvesting.', 'Bamami Coffee không chỉ là một nông trại, đó là tâm huyết của chúng tôi trong việc nâng tầm giá trị hạt cà phê Robusta Việt Nam. Tọa lạc tại độ cao lý tưởng với khí hậu ôn hòa của Gia Lai, chúng tôi tập trung vào canh tác bền vững và thu hoạch chọn lọc.') }}
+          </p>
+          
+          <div class="grid gap-6 pt-4">
+            <div class="flex gap-4">
+              <div class="w-10 h-10 rounded-full bg-coffee-cream flex items-center justify-center shrink-0">
+                <mat-icon class="text-coffee-medium">settings_suggest</mat-icon>
+              </div>
+              <div>
+                <h3 class="font-bold text-coffee-dark mb-1">{{ t('Meticulous Processing', 'Chế biến Tỉ mỉ') }}</h3>
+                <p class="text-sm text-coffee-dark/70">
+                  {{ t('The harvesting, drying, and roasting processes are meticulously cared for.', 'Quy trình thu hái, phơi và rang xay được chăm chút tỉ mỉ.') }}
+                </p>
+              </div>
+            </div>
+
+            <div class="flex gap-4">
+              <div class="w-10 h-10 rounded-full bg-coffee-cream flex items-center justify-center shrink-0">
+                <mat-icon class="text-coffee-medium">verified</mat-icon>
+              </div>
+              <div>
+                <h3 class="font-bold text-coffee-dark mb-1">{{ t('Specialty Quality', 'Chất lượng Đặc sản') }}</h3>
+                <p class="text-sm text-coffee-dark/70">
+                  {{ t('Coffee beans meet Fine Robusta standards with rich flavors and a sweet aftertaste.', 'Hạt cà phê đạt chuẩn Fine Robusta với hương vị phong phú và hậu vị ngọt ngào.') }}
+                </p>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="relative">
+          <img [src]="images[3]" 
+               class="rounded-3xl shadow-2xl rotate-2 hover:rotate-0 transition-transform duration-700" 
+               alt="Harvesting"
+               referrerpolicy="no-referrer">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Process Section -->
+  <section id="process" class="py-24 px-6 bg-coffee-cream/30">
+    <div class="max-w-7xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-coffee-medium uppercase tracking-[0.4em] text-xs font-bold block mb-4">
+          {{ t('Our Journey', 'Hành trình của chúng tôi') }}
+        </span>
+        <h2 class="display text-4xl md:text-5xl mb-8">
+          {{ t('Our Process', 'Quy trình của chúng tôi') }}
+        </h2>
+        <div class="w-16 h-px bg-coffee-light mx-auto"></div>
+      </div>
+
+      <div class="grid md:grid-cols-3 gap-12">
+        <!-- Step 1: Harvesting -->
+        <div class="group">
+          <div class="aspect-[4/5] overflow-hidden rounded-3xl mb-8 relative">
+            <img [src]="images[7]" 
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                 alt="Harvesting"
+                 referrerpolicy="no-referrer">
+            <div class="absolute top-6 left-6 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center font-bold text-coffee-dark">01</div>
+          </div>
+          <h3 class="display text-2xl mb-4">{{ t('Harvesting', 'Thu hoạch') }}</h3>
+          <p class="serif text-coffee-dark/70 leading-relaxed">
+            {{ t('Only the ripest coffee cherries are hand-picked to ensure the highest sugar content.', 'Chỉ những quả cà phê chín mọng mới được hái bằng tay để đảm bảo hàm lượng đường cao nhất.') }}
+          </p>
+        </div>
+
+        <!-- Step 2: Processing -->
+        <div class="group">
+          <div class="aspect-[4/5] overflow-hidden rounded-3xl mb-8 relative">
+            <img [src]="images[8]" 
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                 alt="Processing"
+                 referrerpolicy="no-referrer">
+            <div class="absolute top-6 left-6 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center font-bold text-coffee-dark">02</div>
+          </div>
+          <h3 class="display text-2xl mb-4">{{ t('Processing', 'Sơ chế') }}</h3>
+          <p class="serif text-coffee-dark/70 leading-relaxed">
+            {{ t('Applying Natural processing methods with controlled fermentation.', 'Áp dụng các phương pháp sơ chế Natural, lên men có kiểm soát.') }}
+          </p>
+        </div>
+
+        <!-- Step 3: Roasting & Grinding -->
+        <div class="group">
+          <div class="aspect-[4/5] overflow-hidden rounded-3xl mb-8 relative">
+            <img [src]="images[9]" 
+                 class="w-full h-full object-cover transition-transform duration-700 group-hover:scale-110" 
+                 alt="Roasting and Grinding"
+                 referrerpolicy="no-referrer">
+            <div class="absolute top-6 left-6 w-10 h-10 rounded-full bg-white/90 backdrop-blur-sm flex items-center justify-center font-bold text-coffee-dark">03</div>
+          </div>
+          <h3 class="display text-2xl mb-4">{{ t('Roasting & Grinding', 'Rang, xay') }}</h3>
+          <p class="serif text-coffee-dark/70 leading-relaxed">
+            {{ t('100% authentic coffee is roasted with the utmost care.', '100% cafe nguyên bản được rang với sự chăm chút nhất.') }}
+          </p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Video Section -->
+  <section id="video" class="py-24 px-6 bg-white">
+    <div class="max-w-5xl mx-auto">
+      <div class="text-center mb-16">
+        <span class="text-coffee-medium uppercase tracking-[0.4em] text-xs font-bold block mb-4">
+          {{ t('Story in Motion', 'Câu chuyện qua những thước phim') }}
+        </span>
+        <h2 class="display text-4xl md:text-5xl mb-8">
+          {{ t('Experience Bamami', 'Trải nghiệm Bamami') }}
+        </h2>
+        <div class="w-16 h-px bg-coffee-light mx-auto"></div>
+      </div>
+
+      <div class="aspect-video rounded-3xl overflow-hidden shadow-2xl border border-coffee-dark/5 bg-coffee-cream/20">
+        <iframe 
+          class="w-full h-full"
+          src="https://www.youtube.com/embed/BA-UmJohL7g" 
+          title="Bamami Coffee Farm Video" 
+          frameborder="0" 
+          allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" 
+          referrerpolicy="strict-origin-when-cross-origin" 
+          allowfullscreen>
+        </iframe>
+      </div>
+      
+      <p class="serif italic text-center text-coffee-dark/60 mt-12 max-w-2xl mx-auto">
+        {{ t('Take a closer look at our daily life and the passion that goes into every bean.', 'Cùng nhìn lại cuộc sống hàng ngày và tâm huyết đặt vào từng hạt cà phê.') }}
+      </p>
+    </div>
+  </section>
+
+  <!-- Gallery Grid -->
+  <section id="gallery" class="py-24 bg-coffee-cream">
+    <div class="max-w-7xl mx-auto px-6">
+      <div class="flex flex-col md:flex-row justify-between items-end mb-12 gap-6">
+        <div>
+          <span class="text-coffee-medium uppercase tracking-[0.4em] text-xs font-bold block mb-4">
+            {{ t('Visual Journey', 'Hành trình thị giác') }}
+          </span>
+          <h2 class="display text-4xl md:text-5xl">
+            {{ t('Life at the Farm', 'Cuộc sống tại nông trại') }}
+          </h2>
+        </div>
+        <p class="serif italic text-coffee-dark/60 max-w-md text-right">
+          {{ t('Capturing the essence of our daily labor and the natural beauty of Gia Lai.', 'Ghi lại tinh hoa của lao động hàng ngày và vẻ đẹp tự nhiên của Gia Lai.') }}
+        </p>
+      </div>
+
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="md:col-span-2 group overflow-hidden rounded-3xl relative h-[400px]">
+          <img [src]="images[1]" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Coffee beans processing" referrerpolicy="no-referrer">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+        </div>
+        <div class="group overflow-hidden rounded-3xl relative h-[400px]">
+          <img [src]="images[2]" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Coffee farm landscape" referrerpolicy="no-referrer">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+        </div>
+        <div class="group overflow-hidden rounded-3xl relative h-[400px]">
+          <img [src]="images[4]" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Coffee cherries" referrerpolicy="no-referrer">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+        </div>
+        <div class="md:col-span-2 group overflow-hidden rounded-3xl relative h-[400px]">
+          <img [src]="images[6]" class="w-full h-full object-cover transition-transform duration-1000 group-hover:scale-110" alt="Coffee drying process" referrerpolicy="no-referrer">
+          <div class="absolute inset-0 bg-black/20 group-hover:bg-black/40 transition-colors"></div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Contact & Location -->
+  <section id="contact" class="py-24 px-6 bg-coffee-dark text-white">
+    <div class="max-w-7xl mx-auto grid md:grid-cols-2 gap-20 items-center">
+      <div>
+        <h2 class="display text-5xl mb-8">{{ t('Visit Us', 'Ghé thăm chúng tôi') }}</h2>
+        <p class="serif text-xl text-white/70 mb-12 italic">
+          {{ t('Experience the aroma of fresh coffee beans and the tranquility of our farm.', 'Trải nghiệm hương thơm của những hạt cà phê tươi và sự yên bình của nông trại.') }}
+        </p>
+        
+        <div class="space-y-8">
+          <div class="flex items-start gap-6">
+            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+              <mat-icon>location_on</mat-icon>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-widest text-white/40 mb-1">{{ t('Location', 'Địa chỉ') }}</p>
+              <p class="text-lg">Ianhin, Chư Păh, Gia Lai, Vietnam</p>
+              <a href="https://maps.app.goo.gl/VXp46AB7FdTKvLu7A" target="_blank" class="text-coffee-light hover:underline text-sm mt-2 inline-block">
+                {{ t('Open in Google Maps', 'Mở trong Google Maps') }}
+              </a>
+            </div>
+          </div>
+
+          <div class="flex items-start gap-6">
+            <div class="w-12 h-12 rounded-full bg-white/10 flex items-center justify-center shrink-0">
+              <mat-icon>facebook</mat-icon>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-widest text-white/40 mb-1">Facebook</p>
+              <p class="text-lg">Bamami Coffee</p>
+              <a href="https://www.facebook.com/bamamicoffee" target="_blank" class="text-coffee-light hover:underline text-sm mt-2 inline-block">
+                {{ t('Follow our page', 'Theo dõi trang của chúng tôi') }}
+              </a>
+            </div>
+          </div>
+        </div>
+      </div>
+
+      <div class="h-[500px] rounded-3xl overflow-hidden border border-white/10 shadow-2xl">
+        <iframe 
+          src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3876.543210987654!2d107.9!3d14.1!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zMTTCsDA2JzAwLjAiTiAxMDfCsDU0JzAwLjAiRQ!5e0!3m2!1sen!2s!4v1234567890123!5m2!1sen!2s" 
+          class="w-full h-full grayscale invert opacity-80"
+          style="border:0;" 
+          allowfullscreen="" 
+          loading="lazy">
+        </iframe>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer class="py-12 px-6 bg-coffee-dark border-t border-white/5 text-center">
+    <div class="max-w-7xl mx-auto">
+      <div class="flex items-center justify-center gap-2 mb-6">
+        <span class="display text-xl font-bold tracking-widest text-white">BAMAMI</span>
+        <span class="text-[10px] uppercase tracking-[0.3em] text-coffee-light mt-1">Coffee Farm</span>
+      </div>
+      <p class="text-white/30 text-xs uppercase tracking-widest">
+        &copy; 2024 Bamami Coffee. {{ t('All rights reserved.', 'Bản quyền đã được bảo hộ.') }}
+      </p>
+    </div>
+  </footer>
+</div>

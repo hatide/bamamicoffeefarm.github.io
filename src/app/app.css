@@ -1,0 +1,32 @@
+@keyframes pulse-slow {
+  0%, 100% { transform: scale(1.05); }
+  50% { transform: scale(1.1); }
+}
+
+.animate-pulse-slow {
+  animation: pulse-slow 20s ease-in-out infinite;
+}
+
+section {
+  scroll-margin-top: 80px;
+}
+
+/* Glass effect for nav */
+nav {
+  box-shadow: 0 4px 30px rgba(0, 0, 0, 0.03);
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Image hover effects */
+.group:hover img {
+  filter: brightness(1.1);
+}
+
+/* Custom button styles */
+button {
+  outline: none;
+}
