@@ -57,7 +57,8 @@
                   "maximumError": "8kB"
                 }
               ],
-              "outputHashing": "all"
+              "outputHashing": "all",
+              "baseHref": "/ai-studio-angular-app/"
             },
             "development": {
               "optimization": false,
