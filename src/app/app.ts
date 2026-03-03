@@ -15,16 +15,16 @@ export class App {
   langService = inject(LanguageService);
 
   images = [
-    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741011267812_0.png',
-    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741011267812_1.png',
-    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741011267812_2.png',
-    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741011267812_3.png',
-    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741011267812_4.png',
-    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741011267812_5.png',
-    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741011267812_6.png',
-    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741013158025_0.png',
-    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741013158025_1.png',
-    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741013158025_2.png'
+    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741021880479_0.png',
+    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741021880479_5.png',
+    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741021880479_1.png',
+    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741021880479_2.png',
+    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741021880479_4.png',
+    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741021880479_3.png',
+    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741021880479_6.png',
+    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741021880479_3.png',
+    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741021880479_7.png',
+    'https://storage.googleapis.com/m-infra.appspot.com/v/ais-dev-74fvbuzkc4evbzkpw3cgxo-405262506133.asia-east1.run.app/1741021880479_8.png'
   ];
 
   t(en: string, vi: string) {
