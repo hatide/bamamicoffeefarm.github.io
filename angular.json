@@ -28,6 +28,8 @@
             },
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
+            "ssr": false,
+            "prerender": false,
             "assets": [
               {
                 "glob": "**/*",
@@ -53,7 +55,15 @@
                 }
               ],
               "outputHashing": "all",
-              "baseHref": "/"
+              "baseHref": "./",
+              "optimization": {
+                "scripts": true,
+                "styles": {
+                  "minify": true,
+                  "inlineCritical": false
+                },
+                "fonts": true
+              }
             },
             "development": {
               "optimization": false,

@@ -15,14 +15,7 @@ export class App {
   langService = inject(LanguageService);
 
   constructor() {
-    // Hide the initial loader when the app is initialized
-    const loader = document.getElementById('initial-loader');
-    if (loader) {
-      loader.style.opacity = '0';
-      setTimeout(() => {
-        loader.remove();
-      }, 500);
-    }
+    // App initialized
   }
 
   images = [
