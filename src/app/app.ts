@@ -12,7 +12,7 @@ import { LanguageService, Language } from './language';
   styleUrl: './app.css',
 })
 export class App {
-  langService = inject(LanguageService);
+  public langService = inject(LanguageService);
 
   constructor() {
     // App initialized
