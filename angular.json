@@ -23,7 +23,7 @@
               "GEMINI_API_KEY": "'YOUR_GEMINI_API_KEY'"
             },
             "outputPath": {
-              "base": "dist",
+              "base": "docs",
               "browser": ""
             },
             "deleteOutputPath": true,
