@@ -23,10 +23,10 @@
               "GEMINI_API_KEY": "'YOUR_GEMINI_API_KEY'"
             },
             "outputPath": {
-              "base": ".",
+              "base": "dist",
               "browser": ""
             },
-            "deleteOutputPath": false,
+            "deleteOutputPath": true,
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
             "ssr": false,
