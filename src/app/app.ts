@@ -19,16 +19,16 @@ export class App {
   }
 
   images = [
-    'https://images.unsplash.com/photo-1497935586351-b67a49e012bf?q=80&w=2000&auto=format&fit=crop', // Hero
-    'https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=800&auto=format&fit=crop', // Processing
-    'https://images.unsplash.com/photo-1524350876685-274059332603?q=80&w=800&auto=format&fit=crop', // Landscape
-    'https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=800&auto=format&fit=crop', // Harvesting
-    'https://images.unsplash.com/photo-1620052581237-5d36667cb30f?q=80&w=800&auto=format&fit=crop', // Cherries
-    'https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?q=80&w=800&auto=format&fit=crop', // Unused
-    'https://images.unsplash.com/photo-1587049016823-69ef9d68bd44?q=80&w=800&auto=format&fit=crop', // Drying
-    'https://images.unsplash.com/photo-1559525839-b184a4d698c7?q=80&w=800&auto=format&fit=crop', // Step 1
-    'https://images.unsplash.com/photo-1511537190424-bbbab87ac5eb?q=80&w=800&auto=format&fit=crop', // Step 2
-    'https://images.unsplash.com/photo-1611162458324-aae1eb4129a4?q=80&w=800&auto=format&fit=crop'  // Step 3
+    'https://lh3.googleusercontent.com/d/1Y-edHAeNOLGFE3RwklIB8Fa-sax03EUt',
+    'https://lh3.googleusercontent.com/d/1V9EDOPMlqLrVkUVLJQovd7OqUiqaRnTY',
+    'https://lh3.googleusercontent.com/d/1UCATiFnS_niRS_NiZWwY9mtfKcmKNl2x',
+    'https://lh3.googleusercontent.com/d/1V9EDOPMlqLrVkUVLJQovd7OqUiqaRnTY',
+    'https://lh3.googleusercontent.com/d/1Kk8J_czUsCI4KkYtjUFsOKdxcAqVddAQ',
+    'https://lh3.googleusercontent.com/d/1QwkuOD6ZhBFat8QVpk_-QVvm6NPibwZC',
+    'https://lh3.googleusercontent.com/d/13OiawCigdUzwXPGnTqNmBat-ypmzjJ0Y',
+    'https://lh3.googleusercontent.com/d/1V9EDOPMlqLrVkUVLJQovd7OqUiqaRnTY',
+    'https://lh3.googleusercontent.com/d/13OiawCigdUzwXPGnTqNmBat-ypmzjJ0Y',
+    'https://lh3.googleusercontent.com/d/1UCATiFnS_niRS_NiZWwY9mtfKcmKNl2x'
   ];
 
   t(en: string, vi: string) {
